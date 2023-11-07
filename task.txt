@@ -1,0 +1,5 @@
+1- Ver o texto do header (analisar e ve se tem como tirar o fundo) = V
+2- Sitonizar os itens (alinhar conforme a tela, deixar tudo certinho) = V
+3- Fazer o menu mobile (menu hamburguer) - small
+4- Deixar responsivo
+5- Fazer animações
