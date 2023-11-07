@@ -343,13 +343,19 @@
 }
 //hirai container
 .hirai-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "item1"
-    "item2";
-  justify-content: center;
-  align-items: center;
+  @media only screen and (max-width: $bp-medium-mb) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item1"
+      "item2";
+    justify-content: center;
+    align-items: center;
+
+    .img-mobile-momo {
+      display: flex;
+    }
+  }
 
   &__card {
     display: flex;
@@ -361,6 +367,7 @@
   &__picture {
     & img {
       width: 100vh;
+
       @media only screen and (max-width: $bp-medium-mb) {
         width: 95vh;
         margin: 0 auto;
@@ -368,9 +375,6 @@
         grid-area: item1;
       }
     }
-  }
-  .img-mobile-momo {
-    display: flex;
   }
 }
 .hirai-card {

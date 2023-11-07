@@ -420,28 +420,31 @@ body {
   font-size: 2rem;
   letter-spacing: 0.5px; }
 
-.hirai-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "item1" "item2";
-  justify-content: center;
-  align-items: center; }
-  .hirai-container__card {
-    display: flex;
-    flex-direction: column;
+@media only screen and (max-width: 950px) {
+  .hirai-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "item1" "item2";
     justify-content: center;
-    align-items: center;
-    grid-area: item2; }
-  .hirai-container__picture img {
-    width: 100vh; }
-    @media only screen and (max-width: 950px) {
-      .hirai-container__picture img {
-        width: 95vh;
-        margin: 0 auto;
-        display: none;
-        grid-area: item1; } }
-  .hirai-container .img-mobile-momo {
-    display: flex; }
+    align-items: center; }
+    .hirai-container .img-mobile-momo {
+      display: flex; } }
+
+.hirai-container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: item2; }
+
+.hirai-container__picture img {
+  width: 100vh; }
+  @media only screen and (max-width: 950px) {
+    .hirai-container__picture img {
+      width: 95vh;
+      margin: 0 auto;
+      display: none;
+      grid-area: item1; } }
 
 .hirai-card__title {
   font-size: 6.4rem;
