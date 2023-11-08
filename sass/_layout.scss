@@ -15,6 +15,9 @@
 //container
 .looks-container {
   margin: 0px 140px;
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 0 15px;
+  }
 
   &__pictures {
     display: grid;
@@ -27,6 +30,12 @@
       "item1 item4"
       "item3 item4";
     gap: 15px;
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__text {
     padding-top: 90px;
@@ -34,6 +43,15 @@
 
     font-size: 5rem;
     letter-spacing: -0.5px;
+
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 4rem;
+    }
+  }
+}
+.look-pic {
+  @media only screen and (max-width: $bp-smallest) {
+    height: 300px !important;
   }
 }
 .pictures-1,
@@ -69,6 +87,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    // @media only screen and (max-width: $bp-smallest) {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    // }
   }
 }
 
@@ -134,6 +157,10 @@
   margin-top: 90px;
   background-color: var(--color-b-3);
   padding: 0px 150px;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0px;
+  }
 }
 .footer-main-container {
   display: grid;

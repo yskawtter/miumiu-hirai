@@ -4,6 +4,9 @@
   @media only screen and (max-width: $bp-medium) {
     margin: 0px 60px;
   }
+  @media only screen and (max-width: $bp-smallest-super) {
+    margin: 0px 15px;
+  }
   &__links {
     list-style: none;
     display: flex;
@@ -49,6 +52,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @media only screen and (max-width: $bp-smallest-super) {
+      & img {
+      }
+    }
   }
 }
 
@@ -72,6 +80,10 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 4rem;
+      padding: 0px 15px;
+    }
   }
   &__button {
     padding-top: 60px;
@@ -95,6 +107,12 @@
   &:hover {
     background-color: #d8d7d7;
     color: var(--color-b-4);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 4rem;
+    padding: 10px 35px;
+    font-size: 1.7rem;
   }
 }
 
@@ -157,6 +175,14 @@
 
     font-size: 5rem;
     letter-spacing: -0.5px;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 90px 15px 60px 15px;
+    }
+
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 4rem;
+    }
   }
 }
 
@@ -166,6 +192,15 @@
   align-items: center;
   background: var(--color-b-3);
   border: transparent;
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item1"
+      "item2";
+    place-items: center;
+  }
 
   &__texts {
     margin-left: 140px;
@@ -180,6 +215,18 @@
       padding-right: 15px;
       // padding-block: 60px;
     }
+    @media only screen and (max-width: $bp-small) {
+      max-width: 500px;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-area: item2;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 100%;
+    }
+    @media only screen and (max-width: $bp-smallest-super) {
+      margin-left: 15px;
+    }
   }
   &__overline {
     display: inline-block;
@@ -193,6 +240,9 @@
     @media only screen and (max-width: $bp-largest) {
       font-size: 1rem;
     }
+    @media only screen and (max-width: $bp-small) {
+      padding-block: 15px;
+    }
   }
   &__subtitle {
     font-size: 5rem;
@@ -201,6 +251,9 @@
 
     @media only screen and (max-width: $bp-largest) {
       font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
     }
   }
   &__paragraph {
@@ -211,17 +264,32 @@
     @media only screen and (max-width: $bp-largest) {
       font-size: 1.5rem;
     }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.25rem;
+      line-height: 2.5rem;
+      padding-bottom: 30px;
+    }
+    @media only screen and (max-width: $bp-smallest-super) {
+      padding: 0px 15px 30px 0px;
+    }
   }
   &__photo {
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    & img {
+    }
   }
   &__photo img {
     display: block;
 
     @media only screen and (max-width: $bp-medium) {
-      width: 80vh;
+      width: 100%;
     }
     @media only screen and (max-width: $bp-medium-mb) {
-      width: 64vh;
+      width: 100%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0px 15px;
+      grid-area: item1;
     }
   }
 }
@@ -231,8 +299,7 @@
     padding-right: 140px;
 
     @media only screen and (max-width: $bp-largest) {
-      padding-right: 50px;
-      margin-left: 40px;
+      padding: 0px;
     }
   }
   &__overline-white {
@@ -261,14 +328,26 @@
   justify-content: space-between;
   padding: 0px 140px 90px 140px;
 
+  @media only screen and (max-width: $bp-small) {
+    padding: 0px;
+  }
+
   @media only screen and (max-width: $bp-largest) {
     padding: 0px 140px;
     padding-bottom: 90px;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 90px 15px 60px 15px;
   }
 
   &__cards {
     display: flex;
     justify-content: space-evenly;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__text {
@@ -279,6 +358,12 @@
     letter-spacing: -0.5px;
     color: var(--color-w-3);
     font-weight: 500;
+
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 4rem;
+      padding-top: 0px;
+      padding-bottom: 60px;
+    }
   }
 }
 .product-card {
@@ -354,6 +439,10 @@
 
     .img-mobile-momo {
       display: flex;
+
+      @media only screen and (max-width: $bp-largest) {
+        width: 100%;
+      }
     }
   }
 
@@ -363,16 +452,23 @@
     justify-content: center;
     align-items: center;
     grid-area: item2;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 15px;
+    }
   }
   &__picture {
     & img {
-      width: 100vh;
+      width: 100%;
+      // width: 100vh;
 
       @media only screen and (max-width: $bp-medium-mb) {
         width: 95vh;
         margin: 0 auto;
         display: none;
         grid-area: item1;
+      }
+      @media only screen and (max-width: $bp-largest) {
       }
     }
   }
@@ -436,6 +532,9 @@
 //categories
 .categories-container {
   padding: 0px 140px;
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0px 15px;
+  }
 
   &__text {
     padding-top: 90px;
@@ -444,18 +543,36 @@
     font-size: 5rem;
     letter-spacing: -0.5px;
     font-weight: 500;
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 4rem;
+    }
   }
   &__boxes {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 5px;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+      justify-content: center;
+      // height: 100vh;
+      // width: 100vw;
+    }
   }
 }
 .categories-box {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  // @media only screen and (max-width: $bp-smallest-super) {
+  //   width: 100%;
+  // }
 }
 .picture-text {
   font-size: 3rem;
@@ -466,6 +583,9 @@
 .footer-logo {
   padding-top: 30px;
   padding-bottom: 45px;
+  @media only screen and (max-width: $bp-smallest-super) {
+    margin-left: 15px;
+  }
 }
 .footer-container {
   min-width: 250px;
@@ -474,12 +594,19 @@
     min-width: 150px;
     margin: 22px;
   }
+  @media only screen and (max-width: $bp-smallest-super) {
+    min-width: 100px;
+  }
   &__text {
     text-transform: uppercase;
     font-weight: 500;
     color: var(--color-w-3);
     letter-spacing: 1.5px;
     font-size: 2rem;
+
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 1.5rem;
+    }
   }
   &__navs {
     padding-block: 15px;
@@ -492,6 +619,9 @@
     margin-top: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    @media only screen and (max-width: $bp-smallest-super) {
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -512,7 +642,7 @@
   background-color: #fff;
   position: relative;
   transition: 0.3s;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (max-width: $bp-small) {
@@ -526,8 +656,9 @@
   .header-nav__links {
     position: fixed;
     top: 0;
-    left: 50%;
-    width: 50vw;
+    // left: 50%;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     background: var(--color-b-1);
     clip-path: circle(100px at 90% -15%);
@@ -535,7 +666,7 @@
 
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     gap: 0;
 
     pointer-events: none;
@@ -545,6 +676,8 @@
     font-size: 2.6rem;
     opacity: 0;
     padding: 20px;
+    margin-left: 30px;
+    padding-right: 200px;
   }
   .header-nav__links li:nth-child(1) a {
     transition: 0.5s 0.2s;
