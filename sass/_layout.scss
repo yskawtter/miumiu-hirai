@@ -87,11 +87,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    // @media only screen and (max-width: $bp-smallest) {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    // }
   }
 }
 
@@ -168,5 +163,20 @@
 
   @media only screen and (max-width: $bp-medium-mb) {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+.header-nav.sticky {
+  position: fixed;
+  background-color: var(--color-b-3);
+
+  width: 100%;
+  margin: 0px;
+  padding: 30px 140px;
+  z-index: 999;
+  animation: moveInBottom 0.3s ease-in;
+
+  @media only screen and (max-width: $bp-small) {
+    justify-content: space-between;
+    padding: 30px 15px;
   }
 }

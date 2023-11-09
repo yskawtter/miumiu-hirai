@@ -80,6 +80,7 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    animation: moveInLeft-Text 0.7s ease-in-out;
     @media only screen and (max-width: $bp-smallest) {
       font-size: 4rem;
       padding: 0px 15px;
@@ -102,7 +103,9 @@
   font-size: 2rem;
   letter-spacing: 1.25px;
   text-transform: uppercase;
-  transition: 0.3s;
+  // transition: 0.3s;
+  display: inline-block;
+  animation: moveInBottom 0.7s ease-in-out;
 
   &:hover {
     background-color: #d8d7d7;
@@ -117,6 +120,10 @@
 }
 
 //OUR LOOKS
+.looks-container {
+  transition: 0.3s;
+  animation: moveInRight 0.5s;
+}
 .look-pic {
   background-repeat: no-repeat;
   background-position: center center;
@@ -168,6 +175,8 @@
 
 // MIUMIU FASHION
 .fashion-container {
+  transition: 0.3s;
+  animation: moveInRight 0.5s;
   &__text {
     padding-top: 90px;
     padding-bottom: 60px;
@@ -187,6 +196,7 @@
 }
 
 .fashion-card {
+  animation: moveInBottom 0.7s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -328,6 +338,9 @@
   justify-content: space-between;
   padding: 0px 140px 90px 140px;
 
+  transition: 0.3s;
+  animation: moveInTop 1s;
+
   @media only screen and (max-width: $bp-small) {
     padding: 0px;
   }
@@ -374,6 +387,9 @@
   justify-content: center;
   align-items: center;
   padding: 15px;
+
+  transition: 0.3s;
+  animation: moveInBottom 1.5s;
 
   @media only screen and (max-width: $bp-largest) {
     & img {
@@ -428,6 +444,8 @@
 }
 //hirai container
 .hirai-container {
+  transition: 0.3s;
+  animation: moveInLeft 1s;
   @media only screen and (max-width: $bp-medium-mb) {
     display: grid;
     grid-template-columns: 1fr;
@@ -460,7 +478,6 @@
   &__picture {
     & img {
       width: 100%;
-      // width: 100vh;
 
       @media only screen and (max-width: $bp-medium-mb) {
         width: 95vh;
@@ -530,7 +547,10 @@
   }
 }
 //categories
+
 .categories-container {
+  transition: 0.3s;
+  animation: moveInBottom 1s;
   padding: 0px 140px;
   @media only screen and (max-width: $bp-largest) {
     padding: 0px 15px;
@@ -552,12 +572,12 @@
     flex-direction: row;
     justify-content: space-evenly;
     gap: 5px;
+    transition: 0.3s;
+    animation: moveInTop 1.5s;
 
     @media only screen and (max-width: $bp-smallest) {
       flex-direction: column;
       justify-content: center;
-      // height: 100vh;
-      // width: 100vw;
     }
   }
 }
@@ -570,9 +590,6 @@
     width: 100%;
     padding: 0px 15px;
   }
-  // @media only screen and (max-width: $bp-smallest-super) {
-  //   width: 100%;
-  // }
 }
 .picture-text {
   font-size: 3rem;
@@ -619,6 +636,12 @@
     margin-top: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: 0.3s;
+    flex: 1 0 50%;
+    flex-wrap: wrap;
+    &:hover {
+      color: #9e9e9e;
+    }
     @media only screen and (max-width: $bp-smallest-super) {
       font-size: 1.3rem;
     }
@@ -644,6 +667,9 @@
   transition: 0.3s;
   margin-bottom: 5px;
 }
+.body-noScroll {
+  overflow: hidden;
+}
 
 @media only screen and (max-width: $bp-small) {
   .hamburguer {
@@ -661,8 +687,8 @@
     width: 100vw;
     height: 100vh;
     background: var(--color-b-1);
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
+    clip-path: circle(100px at 90% -20%);
+    transition: 0.5s ease-in-out;
 
     flex-direction: column;
     justify-content: space-around;
