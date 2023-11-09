@@ -1,8 +1,0 @@
-1- Ver o texto do header (analisar e ve se tem como tirar o fundo) = V
-2- Sitonizar os itens (alinhar conforme a tela, deixar tudo certinho) = V
-3- Fazer o menu mobile (menu hamburguer) - small = V (só falta ajeitar o espaçamento)
-4- Deixar responsivo = V
-5- Fazer animações
-
-SUGESTÃO:
-1- Verificar o espaçamento da foto e o top no responsivo (miumiufashion)
