@@ -341,25 +341,25 @@
   transition: 0.3s;
   animation: moveInTop 1s;
 
-  @media only screen and (max-width: $bp-small) {
-    padding: 0px;
-  }
-
   @media only screen and (max-width: $bp-largest) {
     padding: 0px 140px;
     padding-bottom: 90px;
   }
+  @media only screen and (max-width: $bp-small) {
+    padding: 0px 70px 40px 70px;
+  }
   @media only screen and (max-width: $bp-smallest) {
-    padding: 90px 15px 60px 15px;
+    padding: 90px 35px 60px 35px;
   }
 
   &__cards {
     display: flex;
     justify-content: space-evenly;
     @media only screen and (max-width: $bp-small) {
-      flex-direction: column;
-      justify-content: center;
+      justify-content: start;
+      flex-direction: row;
       align-items: center;
+      overflow-x: auto;
     }
   }
 
@@ -390,6 +390,8 @@
 
   transition: 0.3s;
   animation: moveInBottom 1.5s;
+  // min-width: 350px;
+  // height: 110px;
 
   @media only screen and (max-width: $bp-largest) {
     & img {
